@@ -1,8 +1,8 @@
 class Solution {
 public:
     bool closeStrings(string s1, string s2) {
-        map<int,int> m1;
-        map<int,int> m2;
+        map<char,int> m1;
+        map<char,int> m2;
         vector<int> v1;
         vector<int> v2;
         for(int i=0;i<s1.size();i++){
