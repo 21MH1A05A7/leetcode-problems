@@ -20,42 +20,25 @@ public:
             }
             
         }
-        // cout<<i<<" "<<j<<endl;
-            // while(i<j){
-            //     if(s<target){
-            //         break;
-            //     }
-            //     else if(s>=target){
-            //         // cout<<s<<endl;
-            //         s=s-nums[i];
+        cout<<i<<" "<<j<<endl;
+            while(i<j){
+                if(s<target){
+                    break;
+                }
+                else if(s>=target){
+                    // cout<<s<<endl;
+                    s=s-nums[i];
                     
-            //         mi=min(j-i+1,mi);
-            //         cout<<i<<" "<<j<<endl;
-            //         i+=1;
-            //     }
-            // }
+                    mi=min(j-i+1,mi);
+                    cout<<i<<" "<<j<<endl;
+                    i+=1;
+                }
+            }
 
         if(mi==INT_MAX){
             return 0;
         }
         return mi;
-
-        // long long i = 0, j = 0, sum = 0, mini = LLONG_MAX;
-
-        // while (j < nums.size ())
-        // {
-        //     if ((nums [j] + sum) < target)
-        //         sum += nums [j++];
-        //     else
-        //     {
-        //         mini = min (mini, abs (j - i + 1));
-        //         sum -= nums [i++];
-        //     }
-        // }
-        // if (mini == LLONG_MAX)
-        //     return 0;
-    
-        // return mini;
 
     }
 };
