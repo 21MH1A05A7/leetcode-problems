@@ -6,12 +6,8 @@ public:
         for(int i=0;i<boxes.size();i++){
             for(int j=0;j<boxes.size();j++){
                 if(boxes[j]=='1'){
-                    if(j<i){
                         s+=(abs(j-i));
-                    }
-                    else if(j>i){
-                        s+=(abs(j-i));
-                    }
+                    
                 }
             }
             v1.push_back(s);
