@@ -19,7 +19,7 @@ public:
                 combination(i+1,arr,s-arr[i],d,n);
                 d.pop_back();
             }
-            else break;
+            // else break;
         }
      }
     
