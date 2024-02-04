@@ -8,14 +8,14 @@ public:
             
             return;
         }
-        
-        if(ans.size()==0 || ans[ans.size()-1]<=nums[ind]){
+        // for(int i=ind;i<n;i++){
+            if(ans.size()==0 || ans[ans.size()-1]<=nums[ind]){
                 ans.push_back(nums[ind]);
                 func(ind+1,nums,res,n,ans);
                 ans.pop_back();
             }
-        func(ind+1,nums,res,n,ans);
-
+            func(ind+1,nums,res,n,ans);
+        // }
     }
 
     vector<vector<int>> findSubsequences(vector<int>& nums) {
