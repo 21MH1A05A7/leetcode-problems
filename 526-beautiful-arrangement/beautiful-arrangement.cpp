@@ -3,9 +3,9 @@ public:
     int c=0;
     void func(int i,int n,vector<int>& visited,vector<int>& ans,vector<int>& arr){
         if(ans.size()==n){
-            for(int i=0;i<ans.size();i++){
-                cout<<ans[i]<<" ";
-            }
+            // for(int i=0;i<ans.size();i++){
+            //     cout<<ans[i]<<" ";
+            // }
             cout<<endl;
             c+=1;
             return;
