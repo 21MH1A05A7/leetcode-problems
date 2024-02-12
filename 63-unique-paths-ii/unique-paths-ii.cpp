@@ -11,10 +11,7 @@ int dp[1001][1001];
         if(dp[i][j]!=-1){
             return dp[i][j];
         }
-
-        int right=func(i,j+1,n,m,grid);
-        int down=func(i+1,j,n,m,grid);
-        return dp[i][j]=right+down;
+        return dp[i][j]=func(i,j+1,n,m,grid)+func(i+1,j,n,m,grid);
     }
 
     int uniquePathsWithObstacles(vector<vector<int>>& nums) {
