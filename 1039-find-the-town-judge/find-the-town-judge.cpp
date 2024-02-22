@@ -16,11 +16,6 @@ public:
             s[trust[i][1]]++;
             st[trust[i][0]]++;
         }
-        int as=0;
-        for(auto ele:st){
-            as+=ele.first;
-        }
-        int su=(n*(n+1))/2;
         int len=st.size();
         for(auto ele:s){
             if(!st[ele.first]){
