@@ -6,10 +6,6 @@ public:
             return 1e9;
         }
         if(src==dst){
-            for(int i=0;i<v.size();i++){
-                cout<<v[i]<<" ";
-            }
-            cout<<endl;
             return 0;
         }
         if(k==0){
