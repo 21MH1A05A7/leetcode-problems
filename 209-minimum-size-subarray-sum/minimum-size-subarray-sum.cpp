@@ -20,7 +20,7 @@ public:
             }
             
         }
-        cout<<i<<" "<<j<<endl;
+        // cout<<i<<" "<<j<<endl;
             while(i<j){
                 if(s<target){
                     break;
