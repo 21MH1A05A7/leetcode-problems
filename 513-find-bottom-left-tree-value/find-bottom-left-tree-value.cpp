@@ -11,25 +11,22 @@
  */
 class Solution {
 public:
-    int res=0;
-    void func(TreeNode* root,int l,int& m){
-        if(root==NULL){
-            return;
-        }
-        if(l>m){
-            m=l;
-            res=root->val;
-        }
-        func(root->left,l+1,m);
-        func(root->right,l+1,m);
-    }
-
     int findBottomLeftValue(TreeNode* root) {
-        int m=0;
-        if(root->left==NULL && root->right==NULL){
-            return root->val;
+        int val=0;
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty()){
+            int c=0;
+            int k=q.size();
+            val=(q.front())->val;
+            while(c<k){
+                TreeNode* x=q.front();
+                q.pop();
+                if(x->left!=NULL){q.push(x->left);}
+                if(x->right!=NULL){q.push(x->right);}
+                c+=1;
+            }
         }
-        func(root,0,m);
-        return res;
+        return val;   
     }
 };
