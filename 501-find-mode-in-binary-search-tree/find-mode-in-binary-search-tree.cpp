@@ -20,7 +20,7 @@ public:
     //     func1(root->left);
     //     func1(root->right);
     // }
-    map<int,int> mp;
+    unordered_map<int,int> mp;
     int ma=0;
     void func(TreeNode* root){
         if(root==NULL){
