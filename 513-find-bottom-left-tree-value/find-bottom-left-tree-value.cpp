@@ -19,7 +19,6 @@ public:
             int c=0;
             int k=q.size();
             val=(q.front())->val;
-            cout<<val<<" ";
             while(c<k){
                 TreeNode* x=q.front();
                 q.pop();
@@ -28,7 +27,6 @@ public:
                 c+=1;
             }
         }
-        // cout<<val;
         return val;   
     }
 };
