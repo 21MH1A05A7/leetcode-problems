@@ -20,12 +20,10 @@ public:
         // }
         int ma=0;
         while(i<=j){
-            // cout<<arr[i]<<" "<<p<<endl;
             if(p>=arr[i]){
                 p=(p-arr[i]);
                 s+=1;
                 i+=1;
-                // cout<<p<<" "<<arr[i]<<endl;
             }
             else if(s>=1 && p<arr[i]){
                 s-=1;
@@ -33,11 +31,10 @@ public:
                 j-=1;
             }
             else{
-                break;
+                j-=1;
             }
             ma=max(s,ma);
         }
-        // cout<<i<<" "<<j<<endl;
         return ma;
     }
 };
