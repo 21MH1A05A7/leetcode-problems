@@ -8,14 +8,14 @@ public:
         if(s==(total-s)){
             return 1;
         }
-        if(dp[ind][s]!=-1){return dp[ind][s];}
+        
         if(ind==nums.size()){
             if(s==(total-s)){
                 return 1;
             }
             return 0;
         }
-        
+        if(dp[ind][s]!=-1){return dp[ind][s];}
         bool pick=func(ind+1,s+nums[ind],nums,total);
         bool npick=func(ind+1,s,nums,total);
         return dp[ind][s]=pick||npick;
