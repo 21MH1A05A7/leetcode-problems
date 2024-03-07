@@ -13,12 +13,8 @@ public:
                 nums[j]=s;
                 // cout<<nums[j]<<" ";
             }
-            // cout<<nums.size()<<" ";
-            // cout<<endl;
+            
         }
-        if(n==1){
-            return nums[0];
-        }
-        return s;
+        return nums[0];
     }
 };
