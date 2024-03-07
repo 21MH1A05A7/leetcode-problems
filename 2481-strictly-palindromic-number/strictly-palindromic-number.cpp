@@ -16,22 +16,21 @@ public:
 
 
     bool isStrictlyPalindromic(int t) {
-        // for(int i=2;i<=t-2;i++){
-            int n=t;
-            string s;
 
-            int i=t-2;
-            while(n!=1){
-                int rem=n%i;
-                s=to_string(rem)+s;
-                n=n/i;
-            }
-            s='1'+s;
-            // cout<<s<<" ";
-            if(!palin(s)){
-                return 0;
-            }
-        // }
-        return 1;
+            // int n=t;
+            // string s;
+
+            // int i=t-2;
+            // while(n!=1){
+            //     int rem=n%i;
+            //     s=to_string(rem)+s;
+            //     n=n/i;
+            // }
+            // s='1'+s;
+
+            // if(!palin(s)){
+            //     return 0;
+            // }
+        return 0;
     }
 };
