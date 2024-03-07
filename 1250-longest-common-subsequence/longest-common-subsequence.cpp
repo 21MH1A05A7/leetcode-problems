@@ -8,11 +8,8 @@ public:
         if(dp[ind1][ind2]!=-1){
             return dp[ind1][ind2];
         }
-        if(t1[ind1]==t2[ind2]){
+        if(t1[ind1]==t2[ind2]){ //if matched 
             return dp[ind1][ind2]=1+func(ind1-1,ind2-1,t1,t2,dp);
-        }
-        if(dp[ind1][ind2]!=-1){
-            return dp[ind1][ind2];
         }
         return dp[ind1][ind2]=max(func(ind1-1,ind2,t1,t2,dp),func(ind1,ind2-1,t1,t2,dp));
     }
