@@ -2,17 +2,17 @@ class Solution {
 public:
     int maxFrequencyElements(vector<int>& nums) {
         map<int,int> mp;
+        int c=0;
+        int m=0;
         for(int i=0;i<nums.size();i++){
             mp[nums[i]]++;
-        }
-        int ma=0;
-        int c=0;
-        for(auto ele:mp){
-            ma=max(ma,ele.second);
-        }
-        for(auto ele:mp){
-            if(ele.second==ma){
-                c+=ele.second;
+            if(mp[nums[i]]>m){
+                m=mp[nums[i]];
+                c=0;
+            }
+            if(mp[nums[i]]==m){
+                // cout<<nums[i]<<" ";
+                c+=m;
             }
         }
         return c;
