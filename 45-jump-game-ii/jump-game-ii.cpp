@@ -11,9 +11,9 @@ public:
         }
         int ans=INT_MAX;
         for(int i=1;i<=nums[ind];i++){
-            ans=min(ans,1+func(ind+i,n,nums,dp));
+            ans=dp[ind]=min(ans,1+func(ind+i,n,nums,dp));
         }
-        return dp[ind]=ans;
+        return ans;
     }
     int jump(vector<int>& nums) {
         int n=nums.size();
