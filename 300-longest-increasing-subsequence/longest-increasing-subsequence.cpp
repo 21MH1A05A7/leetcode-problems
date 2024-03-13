@@ -1,18 +1,25 @@
 class Solution {
 public:
-    int lengthOfLIS(vector<int>& nums) {
-        if(nums.empty()){
+
+    int func(int ind,int n,vector<int>& arr,int& prev,vector<vector<int>>&dp){
+        if(ind>=n){
             return 0;
         }
-        vector<int> v1(nums.size(),1);
-        for(int i=1;i<nums.size();i++){
-            for(int j=0;j<i;j++){
-                if(nums[i]>nums[j]){
-                    v1[i]=max(v1[i],v1[j]+1);
-                }
-            }
+        int pick=0;
+        if(dp[ind][prev+1]!=-1){
+            return dp[ind][prev+1];
         }
-        int c=*max_element(v1.begin(),v1.end());
-        return c;
+        if(prev==-1 || arr[ind]>arr[prev]){
+            pick=1+func(ind+1,n,arr,ind,dp);
+        }
+        int nonpick=func(ind+1,n,arr,prev,dp);
+        return dp[ind][prev+1]=max(pick,nonpick);
+    }
+
+    int lengthOfLIS(vector<int>& nums) {
+        int n=nums.size();
+        int prev=-1;
+        vector<vector<int>> dp(n+1,vector<int>(n+1,-1));
+        return func(0,n,nums,prev,dp);
     }
 };
