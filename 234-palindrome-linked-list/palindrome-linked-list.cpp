@@ -22,6 +22,9 @@ public:
             if(t1->val==st.top()){
                 st.pop();
             }
+            else{
+                return 0;
+            }
             t1=t1->next;
         }
         return st.empty();
